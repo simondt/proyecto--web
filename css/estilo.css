@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+li {
+    display: inline-block;
+    list-style: none;
+}
+
+.logo {
+    width: 50px;
+}
+
+.busqueda{
+    width: 25px;
+}
+
+header {
+    display: flex;
+    background-color: #747274;
+    align-items: center;
+    justify-content: space-around;
+    height: 75px;
+    border-bottom: 4px solid #5D5B5D;
+    /* hace que el menu de navegación siga al scroll: */
+    position: sticky;
+    top: 0;
+    /* GRID */
+    grid-area: header;
+}
+
+header nav {
+    background-color: #747274;
+}
+
+/* Aplica estilo al menú de navegación */
+header nav a {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 7px;
+    margin: 2px;
+    border-bottom: solid 2px #B9B7A7;
+}
+
+body {
+    background-color: #B9B7A7;
+}
+
+footer{
+    /* GRID */
+    grid-area: footer;
+}
+
+/* INDEX */
+
+#masVendidos {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    /* GRID */
+    grid-area: masVendidos;
+}
+
+.newsletter {
+    margin-top: 50px;
+    padding: 60px;
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/29/13/17/coffee-1869772_960_720.jpg);
+    background-size: cover;
+    background-position: 0px 1000px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    /* GRID */
+    grid-area: newsletter;
+}
+
+/* PRODUCTOS */
+
+.productos{
+    padding: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 90px;
+}
+
+.productos img{
+    width: 300px;
+    max-width: 100%;
+}
+
+/* FAQ Y NOSOTROS */
+
+.articuloFaq{
+    display: flex;
+    flex-direction: row;
+}
+
+.imagenCafe{
+    max-width: 95%;
+}
+
+.nombreSeccion{
+    font-size: 2rem;
+    margin: 25px;
+}
+
+.titulo{
+    margin: 12px;
+    font-size: 24px;
+}
+
+.cursiva{
+    font-style: italic;
+}
+
+.parrafo{
+    margin: 12px;
+    font-size: 20px;
+}
+
+iframe{
+    border: double #747274 8px;
+}
+
+.video{
+    width: 400px;
+}
+
+article{
+    margin: 20px;
+    padding: 20px;
+}
+
+.seccionGrid{
+    /* GRID */
+    grid-area: seccionGrid;
+}
+
+/* CONTACTO */
+
+form{
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+form fieldset{
+    margin: 10px;
+    padding: 10px;
+}
+
+form legend{
+    padding: 10px;
+    font-weight: bold;
+}
+
+form textarea{
+    padding: 10px;
+    border: 2px #747274 solid;
+} 
+
+form input{
+    font-size: 20px;
+    border: 2px #747274 solid;
+}
+
+/* APLICO GRID */
+
+.padreGrid{
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "masVendidos masVendidos masVendidos"
+    "newsletter newsletter newsletter"
+    "footer footer footer";
+}
+
+.padreGridDos{
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "seccionGrid seccionGrid seccionGrid"
+    "newsletter newsletter newsletter"
+    "footer footer footer";
+}
+
+
+
+/* DISEÑO RESPONSIVE */
+
+/* VISTA TABLET */
+
+@media screen and (max-width:1000px){
+    .padreGrid{
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "masVendidos masVendidos"
+        "newsletter newsletter"
+        "footer footer";
+    }
+    body{
+        text-align: center;
+    }
+    .articuloFaq{
+        flex-direction: column;
+        justify-content: center;
+    }
+    iframe{
+        max-width: 95%;
+    }
+}
+
+/* VISTA MOBILE */
+
+@media screen and (max-width:620px){
+    .padreGrid{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "masVendidos"
+        "newsletter"
+        "footer";
+    }
+
+    .imagenCafe{
+        display: none;
+    }
+    
+    header nav a{
+        border: none;
+    }
+    
+}
