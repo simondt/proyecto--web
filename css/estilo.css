@@ -8,7 +8,7 @@
 
 li {
     display: inline-block;
-    list-style: none;
+    list-style-type: none;
 }
 
 .logo {
@@ -46,11 +46,11 @@ header nav a {
     text-transform: uppercase;
     padding: 7px;
     margin: 2px;
-    border-bottom: solid 2px #B9B7A7;
 }
 
 body {
     background-color: #B9B7A7;
+
 }
 
 footer{
@@ -78,6 +78,16 @@ footer{
     border-bottom: 2px solid black;
     /* GRID */
     grid-area: newsletter;
+}
+
+.boton{
+    background-image: linear-gradient(to right,#000000,#434343);
+    color: white;
+    border-radius: 2px;
+    border: none;
+    letter-spacing: 1px;
+    width: 110px;
+    height: 30px;
 }
 
 /* PRODUCTOS */
@@ -238,4 +248,45 @@ form input{
         border: none;
     }
     
+}
+
+/* ANIMACIONES */
+
+/* menu de navegacion */
+
+.menu {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 3px;
+    transition: background-size .3s;
+}
+
+.menu:hover, .menu:focus {
+    background-size: 100% 3px;
+}
+
+/* imagenes de productos */
+
+.productos img:hover {
+    width: 350px;
+    transition: all .5s;
+}
+
+/* titulos */
+
+@keyframes titulo{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 100%;
+    }
+}
+
+.titulo{
+    animation-name: titulo;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
 }
