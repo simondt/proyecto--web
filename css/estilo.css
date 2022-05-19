@@ -1,4 +1,7 @@
+/* google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+/* bootstrap icons */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css");
 
 * {
     margin: 0;
@@ -7,7 +10,7 @@
 }
 
 li {
-    display: inline-block;
+    /* display: inline-block; */
     list-style-type: none;
 }
 
@@ -24,16 +27,17 @@ header {
     background-color: #747274;
     align-items: center;
     justify-content: space-around;
-    height: 75px;
+    height: auto;
     border-bottom: 4px solid #5D5B5D;
     /* hace que el menu de navegación siga al scroll: */
     position: sticky;
     top: 0;
+    z-index: 1;
     /* GRID */
     grid-area: header;
 }
 
-header nav {
+header nav,.dropdown-menu{
     background-color: #747274;
 }
 
@@ -59,6 +63,11 @@ footer{
 }
 
 /* INDEX */
+
+#carrusel{
+    /* GRID */
+    grid-area: carrusel;
+}
 
 #masVendidos {
     margin-top: 50px;
@@ -97,6 +106,7 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    text-align: center;
     gap: 90px;
 }
 
@@ -107,13 +117,22 @@ footer{
 
 /* FAQ Y NOSOTROS */
 
-.articuloFaq{
+/* .articuloFaq{
     display: flex;
     flex-direction: row;
-}
+} */
 
 .imagenCafe{
     max-width: 95%;
+}
+
+.accordion-button{
+    color: white;
+    background-color: #747274;
+}
+
+.accordion-button:hover{
+    box-shadow: black 2px 2px 2px;
 }
 
 .nombreSeccion{
@@ -135,13 +154,8 @@ footer{
     font-size: 20px;
 }
 
-iframe{
-    border: double #747274 8px;
-}
 
-.video{
-    width: 400px;
-}
+
 
 article{
     margin: 20px;
@@ -166,20 +180,9 @@ form fieldset{
     padding: 10px;
 }
 
-form legend{
-    padding: 10px;
-    font-weight: bold;
-}
-
 form textarea{
     padding: 10px;
-    border: 2px #747274 solid;
 } 
-
-form input{
-    font-size: 20px;
-    border: 2px #747274 solid;
-}
 
 /* APLICO GRID */
 
@@ -187,6 +190,7 @@ form input{
     display: grid;
     grid-template-areas: 
     "header header header"
+    "carrusel carrusel carrusel"
     "masVendidos masVendidos masVendidos"
     "newsletter newsletter newsletter"
     "footer footer footer";
@@ -212,6 +216,7 @@ form input{
         display: grid;
         grid-template-areas: 
         "header header"
+        "carrusel carrusel"
         "masVendidos masVendidos"
         "newsletter newsletter"
         "footer footer";
@@ -227,7 +232,6 @@ form input{
         max-width: 95%;
     }
 }
-
 /* VISTA MOBILE */
 
 @media screen and (max-width:620px){
@@ -235,6 +239,7 @@ form input{
         display: grid;
         grid-template-areas: 
         "header"
+        "carrusel"
         "masVendidos"
         "newsletter"
         "footer";
@@ -254,7 +259,7 @@ form input{
 
 /* menu de navegacion */
 
-.menu {
+.menuNav {
     background-image: linear-gradient(currentColor, currentColor);
     background-position: 0% 100%;
     background-repeat: no-repeat;
@@ -262,7 +267,7 @@ form input{
     transition: background-size .3s;
 }
 
-.menu:hover, .menu:focus {
+.menuNav:hover, .menu:focus {
     background-size: 100% 3px;
 }
 

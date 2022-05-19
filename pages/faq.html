@@ -6,59 +6,199 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preguntas frecuentes</title>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/estilo.css">
+
 </head>
 
 <body class="padreGridDos">
     <header>
-        <img class="logo" src="https://cdn.pixabay.com/photo/2013/07/13/09/51/drink-156144_960_720.png" alt="logoCafe">
-        <nav>
-            <ul>
-                <li><a class="menu" href="../index.html">Inicio</a></li>
-                <li><a class="menu" href="../pages/productos.html">Productos</a></li>
-                <li><a class="menu" href="../pages/faq.html">F.A.Q.</a></li>
-                <li><a class="menu" href="../pages/nos.html">Nosotros</a></li>
-                <li><a class="menu" href="../pages/contacto.html">Contacto</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img class="logo"
+                        src="https://cdn.pixabay.com/photo/2013/07/13/09/51/drink-156144_960_720.png"
+                        alt="logoCafe"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle menuNav" href="#" id="navbarDropdownMenuLink"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="nav-link" href="#">Café</a></li>
+                                <li><a class="nav-link" href="../pages/productos.html">Ver todo</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menuNav" href="../pages/faq.html">F.A.Q.</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menuNav" href="../pages/nos.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menuNav" href="../pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </form>
+            </div>
         </nav>
-        <img class="busqueda" src="https://cdn.pixabay.com/photo/2016/03/31/19/14/magnifying-glass-1294834_960_720.png"
-            alt="iconoBusqueda">
     </header>
+    <!-- SECCION DE PREGUNTAS FRECUENTES UTILIZANDO ACORDEON DE BOOTSTRAP -->
     <section class="seccionGrid">
         <h2 class="nombreSeccion">Preguntas frecuentes</h2>
-        <article class="articuloFaq">
-            <div>
-                <h3 class="titulo cursiva">¿Cómo preparar un buen café?</h3>
-                <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam vero magni dolore
-                    assumenda voluptatibus, fugit itaque hic commodi pariatur quas ea quae aliquam aut nulla beatae odit
-                    consequatur iste dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
-                    similique
-                    voluptatibus. Tenetur totam nulla ullam facere a illum iure magnam. Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Ducimus asperiores accusamus illo magni mollitia obcaecati dolor
-                    praesentium tempore. Explicabo incidunt reiciendis minus fugiat minima impedit consectetur, ab quae
-                    praesentium debitis quos dolore tempore, assumenda accusamus temporibus! Ab placeat, porro aperiam
-                    natus
-                    modi, assumenda eligendi atque ex delectus, voluptate consectetur vel.</p>
+        <div class="row container-fluid">
+            <div class="accordion accordion-flush mb-1 col-lg-6 col-md-12" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <h3 class="titulo cursiva">¿Cómo preparar un buen café?</h3>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                        <div class="accordion-body">
+                            <div>
+                                <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam vero
+                                    magni dolore
+                                    assumenda voluptatibus, fugit itaque hic commodi pariatur quas ea quae aliquam aut
+                                    nulla beatae odit
+                                    consequatur iste dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Nesciunt,
+                                    similique
+                                    voluptatibus. Tenetur totam nulla ullam facere a illum iure magnam. Lorem ipsum
+                                    dolor sit amet
+                                    consectetur adipisicing elit. Ducimus asperiores accusamus illo magni mollitia
+                                    obcaecati dolor
+                                    praesentium tempore. Explicabo incidunt reiciendis minus fugiat minima impedit
+                                    consectetur, ab quae
+                                    praesentium debitis quos dolore tempore, assumenda accusamus temporibus! Ab placeat,
+                                    porro aperiam
+                                    natus
+                                    modi, assumenda eligendi atque ex delectus, voluptate consectetur vel.</p>
+                            </div>
+                            <iframe class="video container" width="560" height="315"
+                                src="https://www.youtube.com/embed/J82LB4RGOuA" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <h3 class="titulo cursiva">¿Qué tipo de granos debo comprar?</h3>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                        <div class="accordion-body">
+                            <div>
+                                <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+                                    optio quibusdam
+                                    adipisci earum sunt beatae placeat ut omnis amet quo, illo praesentium non a
+                                    voluptates quia? Magnam,
+                                    qui modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quas
+                                    ratione eaque illo sunt
+                                    architecto doloribus molestias minus maiores! Aut similique deleniti, est ipsum
+                                    natus consectetur
+                                    facilis nemo reprehenderit a accusantium. Tempore ut dolorem fugit ullam odio,
+                                    beatae reprehenderit eos
+                                    magnam quidem? Voluptates corporis fugit quo fuga ullam, quasi totam rem aperiam sed
+                                    quibusdam velit
+                                    alias qui ad, odio nulla?</p>
+                            </div>
+                            <div>
+                                <img class="imagenCafe"
+                                    src="https://cdn.pixabay.com/photo/2016/11/29/13/17/coffee-1869772_960_720.jpg"
+                                    alt="cafe-preparado">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <h3 class="titulo cursiva">¿Lorem ipsum dolor sit amet.?</h3>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                        <div class="accordion-body">
+                            <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eveniet
+                                possimus necessitatibus dolor quo ullam, unde nisi laboriosam mollitia in sapiente
+                                nihil, neque culpa nostrum. Sint reprehenderit optio necessitatibus labore?</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/J82LB4RGOuA"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+            <div class="accordion accordion-flush col-lg-6 col-md-12" id="accordionExampleTwo">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <h3 class="titulo cursiva">¿Lorem ipsum dolor sit amet.?</h3>
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+                        <div class="accordion-body">
+                            <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eveniet
+                                possimus necessitatibus dolor quo ullam, unde nisi laboriosam mollitia in sapiente
+                                nihil, neque culpa nostrum. Sint reprehenderit optio necessitatibus labore?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            <h3 class="titulo cursiva">¿Lorem ipsum dolor sit amet.?</h3>
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
+                        <div class="accordion-body">
+                            <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eveniet
+                                possimus necessitatibus dolor quo ullam, unde nisi laboriosam mollitia in sapiente
+                                nihil, neque culpa nostrum. Sint reprehenderit optio necessitatibus labore?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            <h3 class="titulo cursiva">¿Lorem ipsum dolor sit amet.?</h3>
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix">
+                        <div class="accordion-body">
+                            <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eveniet
+                                possimus necessitatibus dolor quo ullam, unde nisi laboriosam mollitia in sapiente
+                                nihil, neque culpa nostrum. Sint reprehenderit optio necessitatibus labore?</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </article>
-        <article>
-            <h3 class="titulo cursiva">¿Qué tipo de granos debo comprar?</h3>
-            <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente optio quibusdam
-                adipisci earum sunt beatae placeat ut omnis amet quo, illo praesentium non a voluptates quia? Magnam,
-                qui modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quas ratione eaque illo sunt
-                architecto doloribus molestias minus maiores! Aut similique deleniti, est ipsum natus consectetur
-                facilis nemo reprehenderit a accusantium. Tempore ut dolorem fugit ullam odio, beatae reprehenderit eos
-                magnam quidem? Voluptates corporis fugit quo fuga ullam, quasi totam rem aperiam sed quibusdam velit
-                alias qui ad, odio nulla?</p>
-            <img class="imagenCafe" src="https://cdn.pixabay.com/photo/2016/11/29/13/17/coffee-1869772_960_720.jpg"
-                alt="cafe-preparado">
-        </article>
+        </div>
+
     </section>
     <section class="newsletter">
         <h2>Suscribite a nuestro newsletter</h2>
@@ -70,6 +210,11 @@
         <p>Café project <strong>2022</strong></p>
         <strong>Todos los derechos reservados</strong>
     </footer>
+
+    <!-- BUNDLE -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
