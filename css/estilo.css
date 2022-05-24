@@ -99,6 +99,20 @@ footer{
     height: 30px;
 }
 
+
+#verTodo a{
+    text-decoration: none;
+    color: black;
+    transition: all .5s;
+    border-bottom: 2px solid black;
+}
+
+#verTodo a:hover{
+    color: red;
+    font-size: 125%;
+
+}
+
 /* PRODUCTOS */
 
 .productos{
@@ -117,22 +131,39 @@ footer{
 
 /* FAQ Y NOSOTROS */
 
-/* .articuloFaq{
-    display: flex;
-    flex-direction: row;
-} */
-
 .imagenCafe{
     max-width: 95%;
 }
 
-.accordion-button{
-    color: white;
+.accordion-button {
     background-color: #747274;
 }
 
+.accordion-body{
+    background-color: #B9B7A7;
+    transition: all .4s;
+}
+
+.accordion-body:hover{
+    box-shadow: 0px 0px 25px 1px rgba(0,0,0,0.5);
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+} 
+/* cambia el color de las flechas del acordeón */
+
 .accordion-button:hover{
-    box-shadow: black 2px 2px 2px;
+    filter: brightness(95%);
+    transition: all 0.2s;
+}
+
+.accordion-button:focus{
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #747274;
 }
 
 .nombreSeccion{
@@ -145,8 +176,32 @@ footer{
     font-size: 24px;
 }
 
+.centrado{
+    text-align: center;
+}
+
+.botonWsp{
+    background-color: #128c7e;
+    color: white;
+}
+
+.botonWsp:focus{
+    box-shadow: none;
+}
+
+.botonWsp:hover{
+    box-shadow: none;
+    background-color: #25d366;
+    border-color: none;
+    color: white;
+}
+
+
 .cursiva{
     font-style: italic;
+    color: white;
+    /* text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black; */
+    /* agrega bordes al texto */
 }
 
 .parrafo{
@@ -154,12 +209,13 @@ footer{
     font-size: 20px;
 }
 
-
-
-
 article{
     margin: 20px;
     padding: 20px;
+}
+
+iframe{
+    max-width: 95%;
 }
 
 .seccionGrid{
@@ -178,6 +234,11 @@ form{
 form fieldset{
     margin: 10px;
     padding: 10px;
+}
+
+.form-control:focus{
+    box-shadow: none;
+    border-color: black;
 }
 
 form textarea{
@@ -227,9 +288,6 @@ form textarea{
     .articuloFaq{
         flex-direction: column;
         justify-content: center;
-    }
-    iframe{
-        max-width: 95%;
     }
 }
 /* VISTA MOBILE */

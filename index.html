@@ -12,6 +12,8 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- CSS -->
     <link rel="stylesheet" href="./css/estilo.css">
+    <!-- ANIMATE.CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body class="padreGrid">
@@ -32,14 +34,14 @@
                             <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle menuNav" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Productos
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="nav-link" href="#">Café</a></li>
-                            <li><a class="nav-link" href="./pages/productos.html">Ver todo</a></li>
-                        </ul>
+                            <a class="nav-link dropdown-toggle menuNav" href="#" id="navbarDropdownMenuLink"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="nav-link" href="#">Café</a></li>
+                                <li><a class="nav-link" href="./pages/productos.html">Ver todo</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link menuNav" href="./pages/faq.html">F.A.Q.</a>
@@ -67,17 +69,17 @@
     <section id="carrusel">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="4000">
-                <img src="./img/istockphoto-500938476-1024x1024.jpg" class="d-block w-100" alt="plantacion-cafe">
-              </div>
-              <div class="carousel-item" data-bs-interval="4000">
-                <img src="./img/istockphoto-1223793071-1024x1024.jpg" class="d-block w-100" alt="cafe-granos-2">
-              </div>
-              <div class="carousel-item" data-bs-interval="4000">
-                <img src="./img/istockphoto-1159612485-1024x1024.jpg" class="d-block w-100" alt="cafe-taza">
-              </div>
+                <div class="carousel-item active" data-bs-interval="4000">
+                    <img src="./img/istockphoto-500938476-1024x1024.jpg" class="d-block w-100" alt="plantacion-cafe">
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="./img/istockphoto-1223793071-1024x1024.jpg" class="d-block w-100" alt="cafe-granos-2">
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="./img/istockphoto-1159612485-1024x1024.jpg" class="d-block w-100" alt="cafe-taza">
+                </div>
             </div>
-          </div>
+        </div>
     </section>
 
     <section id="masVendidos">
@@ -97,7 +99,7 @@
 
         <!-- Imagenes a modo de placeholder -->
 
-        <h3><a href="./pages/productos.html">Ver todo</a></h3>
+        <h3 id="verTodo" class="animate__animated animate__backInUp"><a href="./pages/productos.html">Ver más</a></h3>
     </section>
     <section class="newsletter">
         <h2>Suscribite a nuestro newsletter</h2>
