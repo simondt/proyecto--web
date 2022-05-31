@@ -1,0 +1,44 @@
+/* DISEÑO RESPONSIVE */
+
+/* VISTA TABLET */
+
+@media screen and (max-width:1000px){
+    .padreGrid{
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "carrusel carrusel"
+        "masVendidos masVendidos"
+        "newsletter newsletter"
+        "footer footer";
+    }
+    body{
+        text-align: center;
+    }
+    .articuloFaq{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+/* VISTA MOBILE */
+
+@media screen and (max-width:620px){
+    .padreGrid{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "carrusel"
+        "masVendidos"
+        "newsletter"
+        "footer";
+    }
+
+    .imagenCafe{
+        display: none;
+    }
+    
+    header nav a{
+        border: none;
+    }
+    
+}

@@ -1,0 +1,15 @@
+/* PRODUCTOS */
+
+.productos{
+    padding: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    gap: 90px;
+
+    img{
+        width: 300px;
+        max-width: 100%;
+    }
+}

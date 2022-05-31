@@ -1,0 +1,92 @@
+/* FAQ Y NOSOTROS */
+
+.imagenCafe{
+    max-width: 95%;
+}
+
+.accordion-button {
+    background-color: $color-header;
+
+    &::after {
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+
+        /* cambia el color de las flechas del acordeón */
+    } 
+    
+    &:hover{
+        filter: brightness(95%);
+        transition: all 0.2s;
+    }
+    
+    &:focus{
+        box-shadow: none;
+    }
+    
+    &:not(.collapsed) {
+        background-color: $color-header;
+    }
+
+}
+
+.accordion-body{
+    background-color: $color-fondo;
+    transition: all .4s;
+
+    &:hover{
+        box-shadow: 0px 0px 25px 1px rgba(0,0,0,0.5);
+    }
+}
+
+.nombreSeccion{
+    font-size: 2rem;
+    margin: 25px;
+}
+
+.titulo{
+    margin: 12px;
+    font-size: 24px;
+}
+
+.centrado{
+    text-align: center;
+}
+
+.botonWsp{
+    background-color: #128c7e;
+    color: white;
+
+    &:focus{
+        box-shadow: none;
+    }
+    
+    &:hover{
+        box-shadow: none;
+        background-color: #25d366;
+        border-color: none;
+        color: white;
+    }  
+}
+
+.cursiva{
+    font-style: italic;
+    color: white;
+}
+
+.parrafo{
+    margin: 12px;
+    font-size: 20px;
+}
+
+article{
+    margin: 20px;
+    padding: 20px;
+}
+
+iframe{
+    max-width: 95%;
+}
+
+.seccionGrid{
+    /* GRID */
+    grid-area: seccionGrid;
+}
