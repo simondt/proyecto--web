@@ -60,7 +60,7 @@
     }
     
     &:hover{
-        box-shadow: none;
+        @extend .botonWsp:focus;
         background-color: #25d366;
         border-color: none;
         color: white;

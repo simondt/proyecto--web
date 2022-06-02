@@ -56,55 +56,6 @@
     width: 300px;
     max-width: 100%; }
 
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Rubik', sans-serif; }
-
-li {
-  /* display: inline-block; */
-  list-style-type: none; }
-
-.logo {
-  width: 50px; }
-
-.busqueda {
-  width: 25px; }
-
-header {
-  display: flex;
-  background-color: #747274;
-  align-items: center;
-  justify-content: space-around;
-  height: auto;
-  border-bottom: 4px solid #5D5B5D;
-  /* hace que el menu de navegación siga al scroll: */
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  /* GRID */
-  grid-area: header; }
-  header .dropdown-menu {
-    background-color: #747274; }
-  header nav {
-    background-color: #747274; }
-    header nav a {
-      font-size: 20px;
-      font-weight: bold;
-      text-decoration: none;
-      color: white;
-      text-transform: uppercase;
-      padding: 7px;
-      margin: 2px;
-      /* Aplica estilo al menú de navegación */ }
-
-body {
-  background-color: #B9B7A7; }
-
-footer {
-  /* GRID */
-  grid-area: footer; }
-
 /* FAQ Y NOSOTROS */
 .imagenCafe {
   max-width: 95%; }
@@ -142,10 +93,9 @@ footer {
 .botonWsp {
   background-color: #128c7e;
   color: white; }
-  .botonWsp:focus {
+  .botonWsp:focus, .botonWsp:hover {
     box-shadow: none; }
   .botonWsp:hover {
-    box-shadow: none;
     background-color: #25d366;
     border-color: none;
     color: white; }
@@ -184,15 +134,6 @@ form {
   box-shadow: none;
   border-color: black; }
 
-/* APLICO GRID */
-.padreGrid {
-  display: grid;
-  grid-template-areas: "header header header" "carrusel carrusel carrusel" "masVendidos masVendidos masVendidos" "newsletter newsletter newsletter" "footer footer footer"; }
-
-.padreGridDos {
-  display: grid;
-  grid-template-areas: "header header header" "seccionGrid seccionGrid seccionGrid" "newsletter newsletter newsletter" "footer footer footer"; }
-
 /* DISEÑO RESPONSIVE */
 /* VISTA TABLET */
 @media screen and (max-width: 1000px) {
@@ -215,6 +156,66 @@ form {
   header nav a {
     border: none; } }
 
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif; }
+
+li {
+  list-style-type: none; }
+
+.logo {
+  width: 50px;
+  height: auto; }
+
+.busqueda {
+  width: 25px;
+  height: auto; }
+
+header {
+  display: flex;
+  background-color: #747274;
+  align-items: center;
+  justify-content: space-around;
+  width: auto;
+  height: auto;
+  border-bottom: 4px solid #5D5B5D;
+  /* hace que el menu de navegación siga al scroll: */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  /* GRID */
+  grid-area: header; }
+  header .dropdown-menu {
+    background-color: #747274; }
+  header nav {
+    background-color: #747274; }
+    header nav a {
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      text-transform: uppercase;
+      padding: 7px;
+      margin: 2px;
+      /* Aplica estilo al menú de navegación */ }
+
+body {
+  background-color: #B9B7A7; }
+
+footer {
+  /* GRID */
+  grid-area: footer; }
+
+/* APLICO GRID */
+.padreGrid {
+  display: grid;
+  grid-template-areas: "header header header" "carrusel carrusel carrusel" "masVendidos masVendidos masVendidos" "newsletter newsletter newsletter" "footer footer footer"; }
+
+.padreGridDos {
+  display: grid;
+  grid-template-areas: "header header header" "seccionGrid seccionGrid seccionGrid" "newsletter newsletter newsletter" "footer footer footer"; }
+
 /* ANIMACIONES */
 /* menu de navegacion */
 .menuNav {
@@ -229,6 +230,7 @@ form {
 /* imagenes de productos */
 .productos img:hover {
   width: 350px;
+  height: auto;
   transition: all .5s; }
 
 /* titulos */

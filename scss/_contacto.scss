@@ -1,21 +1,24 @@
 /* CONTACTO */
 
+// map
+$estiloForm:(margen:10px,tamFuente:20px,borde:black);
+
 form{
-    margin: 10px;
-    padding: 10px;
-    font-size: 20px;
+    margin: map-get($estiloForm,margen);
+    padding: map-get($estiloForm,margen);
+    font-size: map-get($estiloForm,tamFuente);
 
     fieldset{
-        margin: 10px;
-        padding: 10px;
+        margin: map-get($estiloForm,margen);
+        padding: map-get($estiloForm,margen);
     }
     
     textarea{
-        padding: 10px;
+        padding: map-get($estiloForm,margen);
     }    
 }
 
 .form-control:focus{
     box-shadow: none;
-    border-color: black;
+    border-color: map-get($estiloForm,borde);
 }

@@ -3,11 +3,11 @@
 /* bootstrap icons */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css");
 
-@import "index","productos","faqynos","contacto","vistas";
-
 // VARIABLES
 $color-fondo:#B9B7A7;
 $color-header:#747274;
+
+@import "index","productos","faqynos","contacto","vistas";
 
 * {
     margin: 0;
@@ -16,16 +16,21 @@ $color-header:#747274;
 }
 
 li {
-    /* display: inline-block; */
     list-style-type: none;
 }
 
+// mixin para tamaño
+@mixin tamanio($ancho,$alto){
+    width: $ancho;
+    height: $alto;
+}
+
 .logo {
-    width: 50px;
+    @include tamanio(50px,auto);
 }
 
 .busqueda{
-    width: 25px;
+    @include tamanio(25px,auto);
 }
 
 header {
@@ -33,7 +38,7 @@ header {
     background-color: $color-header;
     align-items: center;
     justify-content: space-around;
-    height: auto;
+    @include tamanio(auto,auto);
     border-bottom: 4px solid #5D5B5D;
     /* hace que el menu de navegación siga al scroll: */
     position: sticky;
@@ -114,7 +119,7 @@ footer{
 /* imagenes de productos */
 
 .productos img:hover {
-    width: 350px;
+    @include tamanio(350px,auto);
     transition: all .5s;
 }
 
