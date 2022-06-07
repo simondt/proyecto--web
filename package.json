@@ -1,7 +1,7 @@
 {
-  "name": "proyectokf",
+  "name": "projectcafe",
   "version": "1.0.0",
-  "description": "",
+  "description": "proyecto de sitio de venta de cafe",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
