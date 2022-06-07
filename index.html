@@ -8,6 +8,8 @@
     <!-- descripción: -->
     <meta name="description"
         content="Venta minorista de café de especialidad. Comprá con confianza, ¡llegamos a todo el país!">
+    <!-- keywords -->
+    <meta name="keywords" content="cafe, venta de cafe, cafe argentina, envio, comprar granos">
     <title>Inicio | Café Project</title>
     <!-- favicon: -->
     <link rel="shortcut icon" href="https://cdn.pixabay.com/photo/2013/07/13/09/51/drink-156144_960_720.png"
@@ -26,7 +28,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="./index.html"><img class="logo"
-                        src="https://cdn.pixabay.com/photo/2013/07/13/09/51/drink-156144_960_720.png" alt="logoCafe">
+                        src="./img/logocafe.png" alt="logoCafe">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -89,17 +91,243 @@
     <main id="masVendidos">
         <h1>Más vendidos</h1>
         <ul class="productos">
-            <li><img src="https://cdn.pixabay.com/photo/2013/08/11/19/46/coffee-171653_960_720.jpg" alt="cafe-granos">
+            <li class="column">
+                <div class="cajaProducto">
+                    <div class="nombreProd">
+                        Café brasileño
+                    </div>
+                    <div>
+                        <img src="./img/brasil.png" alt="cafe-brasil">
+                        <!-- Button trigger modal -->
+                    </div>
+                    <div>
+                        <div class="opcionesProd">
+                            <div class="precio">
+                                $200
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">
+                                    <i class="bi bi-cart4"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">El producto ha sido agregado al
+                                            carrito</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="./img/brasil.png" alt="cafe-brasil">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir
+                                            navegando</button>
+                                        <button type="button" class="btn btn-success">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </li>
-            <li><img src="https://cdn.pixabay.com/photo/2013/08/11/19/46/coffee-171653_960_720.jpg" alt="cafe-granos">
+            <li class="column">
+                <div class="cajaProducto">
+                    <div class="nombreProd">
+                        Café colombiano
+                    </div>
+                    <div>
+                        <img src="./img/colombia.png" alt="cafe-colombia">
+                        <!-- Button trigger modal -->
+                    </div>
+                    <div>
+                        <div class="opcionesProd">
+                            <div class="precio">
+                                $350
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal2">
+                                    <i class="bi bi-cart4"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">El producto ha sido agregado al
+                                            carrito</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="./img/colombia.png" alt="cafe-colombia">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir
+                                            navegando</button>
+                                        <button type="button" class="btn btn-success">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </li>
-            <li><img src="https://cdn.pixabay.com/photo/2013/08/11/19/46/coffee-171653_960_720.jpg" alt="cafe-granos">
+            <li class="column">
+                <div class="cajaProducto">
+                    <div class="nombreProd">
+                        Café peruano
+                    </div>
+                    <div>
+                        <img src="./img/peru.png" alt="cafe-peru">
+                        <!-- Button trigger modal -->
+                    </div>
+                    <div>
+                        <div class="opcionesProd">
+                            <div class="precio">
+                                $500
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal3">
+                                    <i class="bi bi-cart4"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">El producto ha sido agregado al
+                                            carrito</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="./img/peru.png" alt="cafe-peru">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir
+                                            navegando</button>
+                                        <button type="button" class="btn btn-success">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </li>
-            <li><img src="https://cdn.pixabay.com/photo/2013/08/11/19/46/coffee-171653_960_720.jpg" alt="cafe-granos">
+            <li class="column">
+                <div class="cajaProducto">
+                    <div class="nombreProd">
+                        Café de Nicaragua
+                    </div>
+                    <div>
+                        <img src="./img/nicaragua.png" alt="cafe-nicaragua">
+                        <!-- Button trigger modal -->
+                    </div>
+                    <div>
+                        <div class="opcionesProd">
+                            <div class="precio">
+                                $700
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal4">
+                                    <i class="bi bi-cart4"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">El producto ha sido agregado al
+                                            carrito</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="./img/nicaragua.png" alt="cafe-nicaragua">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir
+                                            navegando</button>
+                                        <button type="button" class="btn btn-success">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </li>
-            <li><img src="https://cdn.pixabay.com/photo/2013/08/11/19/46/coffee-171653_960_720.jpg" alt="cafe-granos">
+            <li class="column">
+                <div class="cajaProducto">
+                    <div class="nombreProd">
+                        Café de Etiopía
+                    </div>
+                    <div>
+                        <img src="./img/etiopia.png" alt="cafe-etiopia">
+                        <!-- Button trigger modal -->
+                    </div>
+                    <div>
+                        <div class="opcionesProd">
+                            <div class="precio">
+                                $600
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal5">
+                                    <i class="bi bi-cart4"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">El producto ha sido agregado al
+                                            carrito</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="./img/etiopia.png" alt="cafe-etiopia">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir
+                                            navegando</button>
+                                        <button type="button" class="btn btn-success">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </li>
         </ul>
+
 
         <!-- Imagenes a modo de placeholder -->
 
@@ -112,7 +340,13 @@
         <input class="boton" type="submit">
     </section>
     <footer>
+        <div>
+            <a href="https://facebook.com"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com"><i class="bi bi-instagram"></i></a>           
+            <a href="https://twitter.com"><i class="bi bi-twitter"></i></a>
+        </div>
         <p>Café project <strong>2022</strong></p>
+        <img class="logo" src="./img/logocafeMonocromatico.png" alt="logoCafeMono">
         <strong>Todos los derechos reservados</strong>
     </footer>
 

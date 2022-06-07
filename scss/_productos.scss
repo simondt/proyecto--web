@@ -10,6 +10,59 @@
 
     img{
         width: 300px;
-        max-width: 100%;
+        height: 300px;
+        // max-width: 100%;
+        transition: all .4s;
+        /* tiempo de duración de la animación */
+
+        &:hover {
+            width: 350px;
+            height: 350px;
+        }
+
+    }
+
+}
+
+.cajaProducto{
+
+    // background: linear-gradient(to left, #000000, #434343);
+    background-color: #908e81;
+    // border-radius: 6px;
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.6);
+    margin: 10px;
+    padding: 10px;
+    max-width: 90%;
+
+    .nombreProd{
+        color: white;
+        font-size: 24px;
+    }
+
+    .opcionesProd{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        button{
+            color: rgb(12, 181, 12);
+            background-color: white;
+            border: none;
+
+            &:hover{
+                color: white;
+                background-color:rgb(12, 181, 12) ;
+            }
+
+            &:focus{
+                box-shadow: none;
+            }
+        }
+
+        .precio{
+            color: white;
+            font-size: 28px;
+            align-items: flex-end;
+        }
     }
 }

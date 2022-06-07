@@ -4,6 +4,10 @@
     max-width: 95%;
 }
 
+.accordion{
+    z-index: 1;
+}
+
 .accordion-button {
     background-color: $color-header;
 
@@ -34,6 +38,7 @@
 
     &:hover{
         box-shadow: 0px 0px 25px 1px rgba(0,0,0,0.5);
+        /* crea una sombra al rededor del body del acordeon */
     }
 }
 
@@ -44,7 +49,7 @@
 
 .titulo{
     margin: 12px;
-    font-size: 24px;
+    font-size: 27px;
 }
 
 .centrado{
@@ -77,13 +82,17 @@
     font-size: 20px;
 }
 
+.listaOrdenada{
+    @extend .parrafo;
+}
+
 article{
     margin: 20px;
     padding: 20px;
 }
 
 iframe{
-    max-width: 95%;
+    max-width: 100%;
 }
 
 .seccionGrid{

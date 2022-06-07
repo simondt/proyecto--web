@@ -54,11 +54,46 @@
   gap: 90px; }
   .productos img {
     width: 300px;
-    max-width: 100%; }
+    height: 300px;
+    transition: all .4s;
+    /* tiempo de duración de la animación */ }
+    .productos img:hover {
+      width: 350px;
+      height: 350px; }
+
+.cajaProducto {
+  background-color: #908e81;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.6);
+  margin: 10px;
+  padding: 10px;
+  max-width: 90%; }
+  .cajaProducto .nombreProd {
+    color: white;
+    font-size: 24px; }
+  .cajaProducto .opcionesProd {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+    .cajaProducto .opcionesProd button {
+      color: #0cb50c;
+      background-color: white;
+      border: none; }
+      .cajaProducto .opcionesProd button:hover {
+        color: white;
+        background-color: #0cb50c; }
+      .cajaProducto .opcionesProd button:focus {
+        box-shadow: none; }
+    .cajaProducto .opcionesProd .precio {
+      color: white;
+      font-size: 28px;
+      align-items: flex-end; }
 
 /* FAQ Y NOSOTROS */
 .imagenCafe {
   max-width: 95%; }
+
+.accordion {
+  z-index: 1; }
 
 .accordion-button {
   background-color: #747274; }
@@ -77,7 +112,8 @@
   background-color: #B9B7A7;
   transition: all .4s; }
   .accordion-body:hover {
-    box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.5); }
+    box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.5);
+    /* crea una sombra al rededor del body del acordeon */ }
 
 .nombreSeccion {
   font-size: 2rem;
@@ -85,7 +121,7 @@
 
 .titulo {
   margin: 12px;
-  font-size: 24px; }
+  font-size: 27px; }
 
 .centrado {
   text-align: center; }
@@ -104,7 +140,7 @@
   font-style: italic;
   color: white; }
 
-.parrafo {
+.parrafo, .listaOrdenada {
   margin: 12px;
   font-size: 20px; }
 
@@ -113,7 +149,7 @@ article {
   padding: 20px; }
 
 iframe {
-  max-width: 95%; }
+  max-width: 100%; }
 
 .seccionGrid {
   /* GRID */
@@ -142,9 +178,16 @@ form {
     grid-template-areas: "header header" "carrusel carrusel" "masVendidos masVendidos" "newsletter newsletter" "footer footer"; }
   body {
     text-align: center; }
+  .listaOrdenada {
+    margin: 0;
+    padding: 0;
+    /* le quita el margen a las listas ordenadas */ }
   .articuloFaq {
     flex-direction: column;
-    justify-content: center; } }
+    justify-content: center; }
+  .productos img:hover {
+    width: 300px;
+    height: 300px; } }
 
 /* VISTA MOBILE */
 @media screen and (max-width: 620px) {
@@ -165,8 +208,8 @@ li {
   list-style-type: none; }
 
 .logo {
-  width: 50px;
-  height: auto; }
+  width: auto;
+  height: 75px; }
 
 .busqueda {
   width: 25px;
@@ -179,11 +222,11 @@ header {
   justify-content: space-around;
   width: auto;
   height: auto;
-  border-bottom: 4px solid #5D5B5D;
+  box-shadow: 0px 3px 4px 1px #747274;
   /* hace que el menu de navegación siga al scroll: */
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   /* GRID */
   grid-area: header; }
   header .dropdown-menu {
@@ -203,9 +246,20 @@ header {
 body {
   background-color: #B9B7A7; }
 
+/* FOOTER */
 footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px -3px 4px 1px rgba(0, 0, 0, 0.75);
+  color: white;
+  background-color: black;
   /* GRID */
   grid-area: footer; }
+  footer i {
+    padding: 5px;
+    color: white;
+    font-size: 2rem; }
 
 /* APLICO GRID */
 .padreGrid {
@@ -226,12 +280,6 @@ footer {
   transition: background-size .3s; }
   .menuNav:hover, .menuNav:focus {
     background-size: 100% 3px; }
-
-/* imagenes de productos */
-.productos img:hover {
-  width: 350px;
-  height: auto;
-  transition: all .5s; }
 
 /* titulos */
 @keyframes titulo {

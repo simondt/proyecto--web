@@ -26,7 +26,7 @@ li {
 }
 
 .logo {
-    @include tamanio(50px,auto);
+    @include tamanio(auto,75px);
 }
 
 .busqueda{
@@ -39,11 +39,11 @@ header {
     align-items: center;
     justify-content: space-around;
     @include tamanio(auto,auto);
-    border-bottom: 4px solid #5D5B5D;
+    box-shadow: 0px 3px 4px 1px rgba(116,114,116,1);
     /* hace que el menu de navegación siga al scroll: */
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 2;
     /* GRID */
     grid-area: header;
 
@@ -72,9 +72,24 @@ body {
     background-color: $color-fondo;
 }
 
+/* FOOTER */
+
 footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px -3px 4px 1px rgba(0,0,0,0.75);
+
+    color: white;
+    background-color: black;
     /* GRID */
     grid-area: footer;
+
+    i{
+        padding: 5px;
+        color: white;
+        font-size: 2rem;
+    }
 }
 
 
@@ -99,7 +114,6 @@ footer{
     "footer footer footer";
 }
 
-
 /* ANIMACIONES */
 
 /* menu de navegacion */
@@ -114,13 +128,6 @@ footer{
     &:hover, &:focus {
         background-size: 100% 3px;
     }
-}
-
-/* imagenes de productos */
-
-.productos img:hover {
-    @include tamanio(350px,auto);
-    transition: all .5s;
 }
 
 /* titulos */

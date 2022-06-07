@@ -15,9 +15,18 @@
     body{
         text-align: center;
     }
+    .listaOrdenada{
+        margin: 0;
+        padding: 0;
+        /* le quita el margen a las listas ordenadas */
+    }
     .articuloFaq{
         flex-direction: column;
         justify-content: center;
+    }
+    .productos img:hover{
+        width: 300px;
+        height: 300px;
     }
 }
 /* VISTA MOBILE */
