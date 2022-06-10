@@ -46,7 +46,7 @@
 
 /* PRODUCTOS */
 .productos {
-  padding: 90px;
+  padding: 25px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -55,6 +55,8 @@
   .productos img {
     width: 300px;
     height: 300px;
+    max-width: 100%;
+    object-fit: contain;
     transition: all .4s;
     /* tiempo de duración de la animación */ }
     .productos img:hover {
@@ -65,8 +67,7 @@
   background-color: #908e81;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.6);
   margin: 10px;
-  padding: 10px;
-  max-width: 90%; }
+  padding: 10px; }
   .cajaProducto .nombreProd {
     color: white;
     font-size: 24px; }
