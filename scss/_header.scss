@@ -1,0 +1,62 @@
+/* HEADER */
+
+header {
+    display: flex;
+    background-color: $color-header;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0px 3px 4px 1px rgba(116,114,116,1);
+    /* hace que el menu de navegación siga al scroll: */
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    nav{
+        background-color: $color-header;
+
+        .menuNav {
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 3px;
+            transition: background-size .3s;
+        
+            &:hover, &:focus {
+                background-size: 100% 3px;
+            }
+        }
+
+        a {
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            padding: 7px;
+            margin: 2px;
+        
+            /* Aplica estilo al menú de navegación */
+
+            &:hover{
+                color: white;
+            }
+        }
+
+        .busqueda{
+
+            border: 1px solid white;
+            color: white;
+
+            &:hover{
+                background-color: white;
+                color: black;
+            }
+            
+            &:focus{
+                box-shadow: none;
+            }
+
+            
+        }
+    }  
+}

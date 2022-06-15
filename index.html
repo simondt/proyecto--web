@@ -23,13 +23,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body class="padreGrid">
+<body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="./index.html"><img class="logo"
-                        src="./img/logocafe.png" alt="logoCafe">
-                </a>
+                <a class="navbar-brand" href="../index.html"><img class="logo"
+                        src="../img/logocafe.png"
+                        alt="logoCafe"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -38,26 +38,19 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle menuNav" href="#" id="navbarDropdownMenuLink"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Productos
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="nav-link" href="#">Café</a></li>
-                                <li><a class="nav-link" href="./pages/productos.html">Ver todo</a></li>
-                            </ul>
+                            <a class="menuNav" aria-current="page" href="./index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menuNav" href="./pages/faq.html">F.A.Q.</a>
+                            <a class="menuNav" href="./pages/productos.html">Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menuNav" href="./pages/nos.html">Nosotros</a>
+                            <a class="menuNav" href="./pages/faq.html">F.A.Q.</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menuNav" href="./pages/contacto.html">Contacto</a>
+                            <a class="menuNav" href="./pages/nos.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="menuNav" href="./pages/contacto.html">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -65,7 +58,8 @@
             <div class="container-fluid">
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                    <button class="btn busqueda" type="submit"><i class="bi bi-search"></i>
+                    </button>
                 </form>
             </div>
         </nav>
@@ -77,13 +71,10 @@
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="4000">
-                    <img src="./img/istockphoto-500938476-1024x1024.jpg" class="d-block w-100" alt="plantacion-cafe">
+                    <img src="./img/granos-pan.jpg" class="d-block w-100" alt="granosCafe">
                 </div>
                 <div class="carousel-item" data-bs-interval="4000">
-                    <img src="./img/istockphoto-1223793071-1024x1024.jpg" class="d-block w-100" alt="cafe-granos-2">
-                </div>
-                <div class="carousel-item" data-bs-interval="4000">
-                    <img src="./img/istockphoto-1159612485-1024x1024.jpg" class="d-block w-100" alt="cafe-taza">
+                    <img src="./img/paisaje-pan.jpg" class="d-block w-100" alt="paisaje">
                 </div>
             </div>
         </div>
@@ -335,9 +326,10 @@
     </main>
     <section class="newsletter">
         <h2>Suscribite a nuestro newsletter</h2>
-        <label for="correo">e-mail:</label>
-        <input id="correo" type="email">
-        <input class="boton" type="submit">
+        <div>
+        <input id="correo" type="email" placeholder="Ingresá tu email">
+        <input class="boton" type="submit" value="Suscribirse">
+        </div>
     </section>
     <footer>
         <div>

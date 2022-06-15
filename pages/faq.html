@@ -21,7 +21,7 @@
 
 </head>
 
-<body class="padreGridDos">
+<body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
@@ -36,26 +36,19 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle menuNav" href="#" id="navbarDropdownMenuLink"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Productos
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="nav-link" href="#">Café</a></li>
-                                <li><a class="nav-link" href="../pages/productos.html">Ver todo</a></li>
-                            </ul>
+                            <a class="menuNav" aria-current="page" href="../index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menuNav" href="../pages/faq.html">F.A.Q.</a>
+                            <a class="menuNav" href="../pages/productos.html">Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menuNav" href="../pages/nos.html">Nosotros</a>
+                            <a class="menuNav" href="../pages/faq.html">F.A.Q.</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menuNav" href="../pages/contacto.html">Contacto</a>
+                            <a class="menuNav" href="../pages/nos.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="menuNav" href="../pages/contacto.html">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -63,13 +56,14 @@
             <div class="container-fluid">
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                    <button class="btn busqueda" type="submit"><i class="bi bi-search"></i>
+                    </button>
                 </form>
             </div>
         </nav>
     </header>
-    <!-- SECCION DE PREGUNTAS FRECUENTES UTILIZANDO ACORDEON DE BOOTSTRAP -->
-    <section class="seccionGrid">
+    <!-- ACORDEON DE BOOTSTRAP -->
+    <section>
         <h2 class="nombreSeccion">Preguntas frecuentes</h2>
         <div class="row container-fluid">
             <div class="accordion accordion-flush mb-1 col-lg-6 col-md-12" id="accordionExample">
@@ -219,9 +213,10 @@
     </section>
     <section class="newsletter">
         <h2>Suscribite a nuestro newsletter</h2>
-        <label for="correo">e-mail:</label>
-        <input id="correo" type="email">
-        <input class="boton" type="submit">
+        <div>
+        <input id="correo" type="email" placeholder="Ingresá tu email">
+        <input class="boton" type="submit" value="Suscribirse">
+        </div>
     </section>
     <footer>
         <div>
@@ -231,7 +226,6 @@
         </div>
         <p>Café project <strong>2022</strong></p>
         <img class="logo" src="../img/logocafeMonocromatico.png" alt="logoCafeMono">
-
         <strong>Todos los derechos reservados</strong>
     </footer>
 

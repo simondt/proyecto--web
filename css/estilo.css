@@ -3,37 +3,111 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 /* bootstrap icons */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css");
-/* INDEX */
-#carrusel {
-  /* GRID */
-  grid-area: carrusel; }
+/* DISEÑO RESPONSIVE */
+/* VISTA TABLET */
+@media screen and (max-width: 991px) {
+  body {
+    text-align: center; }
+  .listaOrdenada {
+    margin: 0;
+    padding: 0;
+    /* le quita el margen a las listas ordenadas */ }
+  .nav-item {
+    padding: 8px; }
+  .articuloFaq {
+    flex-direction: column;
+    justify-content: center; }
+  .productos img:hover {
+    width: 300px;
+    height: 300px; } }
 
+/* VISTA MOBILE */
+@media screen and (max-width: 620px) {
+  #carrusel {
+    display: none; }
+  .imagenCafe {
+    display: none; }
+  header nav a {
+    border: none; } }
+
+/* HEADER */
+header {
+  display: flex;
+  background-color: #747274;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0px 3px 4px 1px #747274;
+  /* hace que el menu de navegación siga al scroll: */
+  position: sticky;
+  top: 0;
+  z-index: 2; }
+  header nav {
+    background-color: #747274; }
+    header nav .menuNav {
+      background-image: linear-gradient(currentColor, currentColor);
+      background-position: 0% 100%;
+      background-repeat: no-repeat;
+      background-size: 0% 3px;
+      transition: background-size .3s; }
+      header nav .menuNav:hover, header nav .menuNav:focus {
+        background-size: 100% 3px; }
+    header nav a {
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      text-transform: uppercase;
+      padding: 7px;
+      margin: 2px;
+      /* Aplica estilo al menú de navegación */ }
+      header nav a:hover {
+        color: white; }
+    header nav .busqueda {
+      border: 1px solid white;
+      color: white; }
+      header nav .busqueda:hover {
+        background-color: white;
+        color: black; }
+      header nav .busqueda:focus {
+        box-shadow: none; }
+
+/* FOOTER */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px -3px 4px 1px rgba(0, 0, 0, 0.75);
+  color: white;
+  background-color: black; }
+  footer i {
+    padding: 5px;
+    color: white;
+    font-size: 2rem; }
+
+/* INDEX */
 #masVendidos {
   margin-top: 50px;
   margin-bottom: 50px;
-  text-align: center;
-  /* GRID */
-  grid-area: masVendidos; }
+  text-align: center; }
 
 .newsletter {
   margin-top: 50px;
   padding: 60px;
-  background-image: url(https://cdn.pixabay.com/photo/2016/11/29/13/17/coffee-1869772_960_720.jpg);
-  background-size: cover;
-  background-position: 0px 1000px;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  /* GRID */
-  grid-area: newsletter; }
+  background-image: url(../img/fondoNews.jpg);
+  object-fit: fill;
+  border-top: 2px solid black; }
 
-.boton {
-  background-image: linear-gradient(to right, #000000, #434343);
+.boton, .botonContacto {
+  margin: 5px;
+  background: linear-gradient(to right, #000000, #434343);
   color: white;
-  border-radius: 2px;
   border: none;
-  letter-spacing: 1px;
-  width: 110px;
-  height: 30px; }
+  width: 100px;
+  height: 30px;
+  transition: all .2s; }
+  .boton:hover, .botonContacto:hover {
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+    color: black; }
 
 #verMas a {
   text-decoration: none;
@@ -120,22 +194,35 @@
   font-size: 2rem;
   margin: 25px; }
 
+/* animaciones de títulos */
+@keyframes titulo {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 100%; } }
+
 .titulo {
   margin: 12px;
-  font-size: 27px; }
+  font-size: 27px;
+  animation-name: titulo;
+  animation-duration: .5s;
+  animation-iteration-count: 1; }
 
-.centrado {
-  text-align: center; }
-
-.botonWsp {
-  background-color: #128c7e;
-  color: white; }
-  .botonWsp:focus, .botonWsp:hover {
-    box-shadow: none; }
-  .botonWsp:hover {
-    background-color: #25d366;
-    border-color: none;
+.dondeEstamos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap; }
+  .dondeEstamos .botonWsp {
+    background-color: #128c7e;
     color: white; }
+    .dondeEstamos .botonWsp:focus, .dondeEstamos .botonWsp:hover {
+      box-shadow: none; }
+    .dondeEstamos .botonWsp:hover {
+      background-color: #25d366;
+      border-color: none;
+      color: white; }
 
 .cursiva {
   font-style: italic;
@@ -150,11 +237,7 @@ article {
   padding: 20px; }
 
 iframe {
-  max-width: 100%; }
-
-.seccionGrid {
-  /* GRID */
-  grid-area: seccionGrid; }
+  max-width: 95%; }
 
 /* CONTACTO */
 form {
@@ -171,39 +254,20 @@ form {
   box-shadow: none;
   border-color: black; }
 
-/* DISEÑO RESPONSIVE */
-/* VISTA TABLET */
-@media screen and (max-width: 1000px) {
-  .padreGrid {
-    display: grid;
-    grid-template-areas: "header header" "carrusel carrusel" "masVendidos masVendidos" "newsletter newsletter" "footer footer"; }
-  body {
-    text-align: center; }
-  .listaOrdenada {
-    margin: 0;
-    padding: 0;
-    /* le quita el margen a las listas ordenadas */ }
-  .articuloFaq {
-    flex-direction: column;
-    justify-content: center; }
-  .productos img:hover {
-    width: 300px;
-    height: 300px; } }
-
-/* VISTA MOBILE */
-@media screen and (max-width: 620px) {
-  .padreGrid {
-    display: grid;
-    grid-template-areas: "header" "carrusel" "masVendidos" "newsletter" "footer"; }
-  .imagenCafe {
-    display: none; }
-  header nav a {
-    border: none; } }
+.botonContacto {
+  height: auto;
+  width: auto;
+  margin: 0px; }
+  .botonContacto:focus {
+    box-shadow: none; }
 
 * {
   margin: 0;
   padding: 0;
   font-family: 'Rubik', sans-serif; }
+
+body {
+  background-color: #B9B7A7; }
 
 li {
   list-style-type: none; }
@@ -211,85 +275,3 @@ li {
 .logo {
   width: auto;
   height: 75px; }
-
-.busqueda {
-  width: 25px;
-  height: auto; }
-
-header {
-  display: flex;
-  background-color: #747274;
-  align-items: center;
-  justify-content: space-around;
-  width: auto;
-  height: auto;
-  box-shadow: 0px 3px 4px 1px #747274;
-  /* hace que el menu de navegación siga al scroll: */
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  /* GRID */
-  grid-area: header; }
-  header .dropdown-menu {
-    background-color: #747274; }
-  header nav {
-    background-color: #747274; }
-    header nav a {
-      font-size: 20px;
-      font-weight: bold;
-      text-decoration: none;
-      color: white;
-      text-transform: uppercase;
-      padding: 7px;
-      margin: 2px;
-      /* Aplica estilo al menú de navegación */ }
-
-body {
-  background-color: #B9B7A7; }
-
-/* FOOTER */
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0px -3px 4px 1px rgba(0, 0, 0, 0.75);
-  color: white;
-  background-color: black;
-  /* GRID */
-  grid-area: footer; }
-  footer i {
-    padding: 5px;
-    color: white;
-    font-size: 2rem; }
-
-/* APLICO GRID */
-.padreGrid {
-  display: grid;
-  grid-template-areas: "header header header" "carrusel carrusel carrusel" "masVendidos masVendidos masVendidos" "newsletter newsletter newsletter" "footer footer footer"; }
-
-.padreGridDos {
-  display: grid;
-  grid-template-areas: "header header header" "seccionGrid seccionGrid seccionGrid" "newsletter newsletter newsletter" "footer footer footer"; }
-
-/* ANIMACIONES */
-/* menu de navegacion */
-.menuNav {
-  background-image: linear-gradient(currentColor, currentColor);
-  background-position: 0% 100%;
-  background-repeat: no-repeat;
-  background-size: 0% 3px;
-  transition: background-size .3s; }
-  .menuNav:hover, .menuNav:focus {
-    background-size: 100% 3px; }
-
-/* titulos */
-@keyframes titulo {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 100%; } }
-
-.titulo {
-  animation-name: titulo;
-  animation-duration: .5s;
-  animation-iteration-count: 1; }

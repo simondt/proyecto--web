@@ -2,16 +2,7 @@
 
 /* VISTA TABLET */
 
-@media screen and (max-width:1000px){
-    .padreGrid{
-        display: grid;
-        grid-template-areas: 
-        "header header"
-        "carrusel carrusel"
-        "masVendidos masVendidos"
-        "newsletter newsletter"
-        "footer footer";
-    }
+@media screen and (max-width:991px){
     body{
         text-align: center;
     }
@@ -19,6 +10,9 @@
         margin: 0;
         padding: 0;
         /* le quita el margen a las listas ordenadas */
+    }
+    .nav-item{
+        padding: 8px;
     }
     .articuloFaq{
         flex-direction: column;
@@ -32,16 +26,10 @@
 /* VISTA MOBILE */
 
 @media screen and (max-width:620px){
-    .padreGrid{
-        display: grid;
-        grid-template-areas: 
-        "header"
-        "carrusel"
-        "masVendidos"
-        "newsletter"
-        "footer";
+    #carrusel{
+        display: none;
     }
-
+    
     .imagenCafe{
         display: none;
     }

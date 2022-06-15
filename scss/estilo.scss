@@ -7,7 +7,13 @@
 $color-fondo:#B9B7A7;
 $color-header:#747274;
 
-@import "index","productos","faqynos","contacto","vistas";
+// mixin para tamaño
+@mixin tamanio($ancho,$alto){
+    width: $ancho;
+    height: $alto;
+}
+
+@import "vistas","header","footer","index","productos","faqynos","contacto";
 
 * {
     margin: 0;
@@ -15,135 +21,15 @@ $color-header:#747274;
     font-family: 'Rubik', sans-serif;
 }
 
-li {
-    list-style-type: none;
+body {
+    background-color: $color-fondo;
 }
 
-// mixin para tamaño
-@mixin tamanio($ancho,$alto){
-    width: $ancho;
-    height: $alto;
+li {
+    list-style-type: none;
 }
 
 .logo {
     @include tamanio(auto,75px);
 }
 
-.busqueda{
-    @include tamanio(25px,auto);
-}
-
-header {
-    display: flex;
-    background-color: $color-header;
-    align-items: center;
-    justify-content: space-around;
-    @include tamanio(auto,auto);
-    box-shadow: 0px 3px 4px 1px rgba(116,114,116,1);
-    /* hace que el menu de navegación siga al scroll: */
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    /* GRID */
-    grid-area: header;
-
-    .dropdown-menu{
-        background-color: $color-header;
-    }
-
-    nav{
-        background-color: $color-header;
-
-        a {
-            font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-            color: white;
-            text-transform: uppercase;
-            padding: 7px;
-            margin: 2px;
-        
-            /* Aplica estilo al menú de navegación */
-        }
-    }  
-}
-
-body {
-    background-color: $color-fondo;
-}
-
-/* FOOTER */
-
-footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0px -3px 4px 1px rgba(0,0,0,0.75);
-
-    color: white;
-    background-color: black;
-    /* GRID */
-    grid-area: footer;
-
-    i{
-        padding: 5px;
-        color: white;
-        font-size: 2rem;
-    }
-}
-
-
-/* APLICO GRID */
-
-.padreGrid{
-    display: grid;
-    grid-template-areas: 
-    "header header header"
-    "carrusel carrusel carrusel"
-    "masVendidos masVendidos masVendidos"
-    "newsletter newsletter newsletter"
-    "footer footer footer";
-}
-
-.padreGridDos{
-    display: grid;
-    grid-template-areas: 
-    "header header header"
-    "seccionGrid seccionGrid seccionGrid"
-    "newsletter newsletter newsletter"
-    "footer footer footer";
-}
-
-/* ANIMACIONES */
-
-/* menu de navegacion */
-
-.menuNav {
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 3px;
-    transition: background-size .3s;
-
-    &:hover, &:focus {
-        background-size: 100% 3px;
-    }
-}
-
-/* titulos */
-
-@keyframes titulo{
-    0%{
-        opacity: 0;
-    }
-
-    100%{
-        opacity: 100%;
-    }
-}
-
-.titulo{
-    animation-name: titulo;
-    animation-duration: .5s;
-    animation-iteration-count: 1;
-}

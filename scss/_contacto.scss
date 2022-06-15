@@ -22,3 +22,14 @@ form{
     box-shadow: none;
     border-color: map-get($estiloForm,borde);
 }
+
+.botonContacto{
+    @extend .boton;
+    height: auto;
+    width: auto;
+    margin: 0px;
+
+    &:focus{
+        box-shadow: none;
+    }
+}
