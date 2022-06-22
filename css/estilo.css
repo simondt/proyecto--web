@@ -3,33 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 /* bootstrap icons */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css");
-/* DISEÑO RESPONSIVE */
-/* VISTA TABLET */
-@media screen and (max-width: 991px) {
-  body {
-    text-align: center; }
-  .listaOrdenada {
-    margin: 0;
-    padding: 0;
-    /* le quita el margen a las listas ordenadas */ }
-  .nav-item {
-    padding: 8px; }
-  .articuloFaq {
-    flex-direction: column;
-    justify-content: center; }
-  .productos img:hover {
-    width: 300px;
-    height: 300px; } }
-
-/* VISTA MOBILE */
-@media screen and (max-width: 620px) {
-  #carrusel {
-    display: none; }
-  .imagenCafe {
-    display: none; }
-  header nav a {
-    border: none; } }
-
 /* HEADER */
 header {
   display: flex;
@@ -63,6 +36,7 @@ header {
       header nav a:hover {
         color: white; }
     header nav .busqueda {
+      /* botón de busqueda */
       border: 1px solid white;
       color: white; }
       header nav .busqueda:hover {
@@ -115,7 +89,8 @@ footer {
   transition: all .5s;
   border-bottom: 2px solid black; }
   #verMas a:hover {
-    color: red;
+    color: #4E5166;
+    border-color: #4E5166;
     font-size: 125%; }
 
 /* PRODUCTOS */
@@ -138,10 +113,12 @@ footer {
       height: 350px; }
 
 .cajaProducto {
+  /* caja contenedora de los productos */
   background-color: #908e81;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.6);
   margin: 10px;
-  padding: 10px; }
+  padding: 10px;
+  /* personalización del prompt del MODAL */ }
   .cajaProducto .nombreProd {
     color: white;
     font-size: 24px; }
@@ -149,26 +126,55 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around; }
-    .cajaProducto .opcionesProd button {
+    .cajaProducto .opcionesProd .btn-success {
       color: #0cb50c;
       background-color: white;
       border: none; }
-      .cajaProducto .opcionesProd button:hover {
+      .cajaProducto .opcionesProd .btn-success:hover {
         color: white;
         background-color: #0cb50c; }
-      .cajaProducto .opcionesProd button:focus {
+      .cajaProducto .opcionesProd .btn-success:focus {
         box-shadow: none; }
     .cajaProducto .opcionesProd .precio {
       color: white;
       font-size: 28px;
       align-items: flex-end; }
+  .cajaProducto .modal-header {
+    background-color: #747274;
+    color: white; }
+    .cajaProducto .modal-header .btn-close:focus {
+      box-shadow: none; }
+  .cajaProducto .modal-body {
+    background: linear-gradient(to bottom, #ada996, #eaeaea); }
+  .cajaProducto .modal-footer {
+    background-color: #eaeaea; }
+    .cajaProducto .modal-footer .btn-success {
+      color: white;
+      background-color: #0cb50c;
+      border: none; }
+      .cajaProducto .modal-footer .btn-success:focus {
+        box-shadow: none; }
+    .cajaProducto .modal-footer .btn-secondary {
+      border: none;
+      background-color: #747274; }
+      .cajaProducto .modal-footer .btn-secondary:focus {
+        box-shadow: none; }
 
 /* FAQ Y NOSOTROS */
 .imagenCafe {
   max-width: 95%; }
 
 .accordion {
-  z-index: 1; }
+  z-index: 1;
+  width: 940px;
+  max-width: 100%; }
+
+.acordeon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px;
+  gap: 15px; }
 
 .accordion-button {
   background-color: #747274; }
@@ -188,14 +194,14 @@ footer {
   transition: all .4s; }
   .accordion-body:hover {
     box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.5);
-    /* crea una sombra al rededor del body del acordeon */ }
+    /* crea una sombra alrededor del body del acordeon */ }
 
 .nombreSeccion {
   font-size: 2rem;
   margin: 25px; }
 
-/* animaciones de títulos */
 @keyframes titulo {
+  /* animaciones de títulos */
   0% {
     opacity: 0; }
   100% {
@@ -203,7 +209,7 @@ footer {
 
 .titulo {
   margin: 12px;
-  font-size: 27px;
+  font-size: 24px;
   animation-name: titulo;
   animation-duration: .5s;
   animation-iteration-count: 1; }
@@ -260,6 +266,41 @@ form {
   margin: 0px; }
   .botonContacto:focus {
     box-shadow: none; }
+
+/* DISEÑO RESPONSIVE */
+/* VISTA TABLET */
+@media screen and (max-width: 991px) {
+  body {
+    text-align: center; }
+  .listaOrdenada {
+    margin: 0;
+    padding: 0;
+    /* le quita el margen a las listas ordenadas */ }
+  .nav-item {
+    padding: 8px; }
+  .articuloFaq {
+    flex-direction: column;
+    justify-content: center; }
+  .productos img:hover {
+    width: 300px;
+    height: 300px; }
+  .acordeon {
+    flex-direction: column;
+    gap: 2px; } }
+
+/* VISTA MOBILE */
+@media screen and (max-width: 620px) {
+  #carrusel {
+    display: none; }
+  .imagenCafe {
+    display: none; }
+  header nav a {
+    border: none; }
+  .accordion-button {
+    display: block;
+    text-align: center; }
+  .cursiva {
+    font-size: 22px; } }
 
 * {
   margin: 0;

@@ -13,7 +13,7 @@ $color-header:#747274;
     height: $alto;
 }
 
-@import "vistas","header","footer","index","productos","faqynos","contacto";
+@import "header","footer","index","productos","faqynos","contacto","vistas";
 
 * {
     margin: 0;

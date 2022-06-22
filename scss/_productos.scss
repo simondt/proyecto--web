@@ -26,7 +26,7 @@
 }
 
 .cajaProducto{
-
+    /* caja contenedora de los productos */
     background-color: #908e81;
     box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.6);
     margin: 10px;
@@ -42,7 +42,7 @@
         flex-direction: row;
         justify-content: space-around;
 
-        button{
+        .btn-success{
             color: rgb(12, 181, 12);
             background-color: white;
             border: none;
@@ -63,4 +63,44 @@
             align-items: flex-end;
         }
     }
+
+    /* personalización del prompt del MODAL */
+    .modal-header{
+        background-color: $color-header;
+        color: white;
+
+        .btn-close:focus{
+            box-shadow: none;
+        }
+    }
+
+    .modal-body{
+        background: linear-gradient(to bottom, #ada996, #eaeaea); 
+
+    }
+    
+    .modal-footer{
+        background-color: #eaeaea;
+        
+        .btn-success{
+            color: white;
+            background-color:rgb(12, 181, 12);
+            border: none;
+                
+            &:focus{
+                box-shadow: none;
+            }
+        }
+
+        .btn-secondary{
+            border: none;
+            background-color: $color-header;
+                
+            &:focus{
+                box-shadow: none;
+            }
+
+        }
+    }
+    
 }

@@ -6,6 +6,16 @@
 
 .accordion{
     z-index: 1;
+    width: 940px;
+    max-width: 100%;
+}
+
+.acordeon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px;
+    gap: 15px;
 }
 
 .accordion-button {
@@ -38,7 +48,7 @@
 
     &:hover{
         box-shadow: 0px 0px 25px 1px rgba(0,0,0,0.5);
-        /* crea una sombra al rededor del body del acordeon */
+        /* crea una sombra alrededor del body del acordeon */
     }
 }
 
@@ -47,9 +57,8 @@
     margin: 25px;
 }
 
-/* animaciones de títulos */
-
 @keyframes titulo{
+    /* animaciones de títulos */
     0%{
         opacity: 0;
     }
@@ -61,7 +70,7 @@
 
 .titulo{
     margin: 12px;
-    font-size: 27px;
+    font-size: 24px;
     animation-name: titulo;
     animation-duration: .5s;
     animation-iteration-count: 1;
@@ -91,7 +100,6 @@
     }
 
 }
-
 
 .cursiva{
     font-style: italic;
